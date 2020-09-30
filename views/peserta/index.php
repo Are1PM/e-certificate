@@ -15,17 +15,17 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Peserta', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= !Yii::$app->user->isGuest ? Html::a('Create Peserta', ['create'], ['class' => 'btn btn-success']) : "" ?>
     </p>
 
     <?php Pjax::begin(); ?>
-    <?php echo $this->render('_search', ['model' => $searchModel]);
+    <?php // echo $this->render('_search', ['model' => $searchModel]);
     ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'summary' => "Halaman ke-{page} dari {totalCount} halaman",
+        'summary' => "{count} dari total {totalCount} data",
         'columns' => [
             [
                 'class' => 'yii\grid\SerialColumn',
