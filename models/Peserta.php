@@ -32,7 +32,8 @@ class Peserta extends \yii\db\ActiveRecord
     {
         return [
             [['peserta_nama', 'peserta_no_hp', 'peserta_email', 'peserta_instansi'], 'required'],
-            [['peserta_nama', 'peserta_email', 'peserta_instansi'], 'string', 'max' => 145],
+            [['peserta_nama', 'peserta_instansi'], 'string', 'max' => 145],
+            [['peserta_email'], 'email'],
             [['peserta_no_hp'], 'string', 'max' => 45],
         ];
     }
