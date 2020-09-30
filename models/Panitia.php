@@ -44,10 +44,10 @@ class Panitia extends \yii\db\ActiveRecord
     {
         return [
             'panitia_id' => 'Panitia ID',
-            'panitia_nama' => 'Panitia Nama',
-            'panitia_email' => 'Panitia Email',
-            'panitia_no_hp' => 'Panitia No Hp',
-            'panitia_web' => 'Panitia Web',
+            'panitia_nama' => 'Nama Panitia',
+            'panitia_email' => 'Email Panitia',
+            'panitia_no_hp' => 'No HP Panitia',
+            'panitia_web' => 'Web Panita',
         ];
     }
 
