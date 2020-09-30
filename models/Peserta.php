@@ -44,10 +44,10 @@ class Peserta extends \yii\db\ActiveRecord
     {
         return [
             'peserta_id' => 'Peserta ID',
-            'peserta_nama' => 'Peserta Nama',
-            'peserta_no_hp' => 'Peserta No Hp',
-            'peserta_email' => 'Peserta Email',
-            'peserta_instansi' => 'Peserta Instansi',
+            'peserta_nama' => 'Nama Peserta',
+            'peserta_no_hp' => 'No HP Peserta',
+            'peserta_email' => 'Email Peserta',
+            'peserta_instansi' => 'Instansi Peserta',
         ];
     }
 
