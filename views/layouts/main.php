@@ -10,6 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
+$guest = !Yii::$app->user->isGuest;
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -41,10 +42,12 @@ AppAsset::register($this);
             'options' => ['class' => 'navbar-nav navbar-right'],
             'items' => [
                 ['label' => 'Home', 'url' => ['/site/index']],
-                ['label' => 'Panitia', 'url' => ['/panitia/index']],
-                ['label' => 'Narasumber', 'url' => ['/narasumber/index']],
-                ['label' => 'Peserta', 'url' => ['/peserta/index']],
-                ['label' => 'Tema', 'url' => ['/tema/index']],
+                ['label' => 'Panitia', 'url' => ['/panitia/index'], 'visible' => !$guest],
+                ['label' => 'Narasumber', 'url' => ['/narasumber/index'], 'visible' => !$guest],
+                ['label' => 'Peserta', 'url' => ['/peserta/index'], 'visible' => !$guest],
+                ['label' => 'Tema', 'url' => ['/tema/index'], 'visible' => !$guest],
+                ['label' => 'Webinar', 'url' => ['/webinar/index'], 'visible' => !$guest],
+                ['label' => 'e-certificate', 'url' => ['/webinar/index']],
                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]) : ('<li>'
                     . Html::beginForm(['/site/logout'], 'post')
                     . Html::submitButton(
