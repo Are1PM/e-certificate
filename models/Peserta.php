@@ -57,8 +57,8 @@ class Peserta extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getPesertaHasWebinar()
+    public function getECertificate()
     {
-        return $this->hasOne(PesertaHasWebinar::className(), ['peserta_id' => 'peserta_id']);
+        return $this->hasOne(ECertificate::className(), ['peserta_id' => 'peserta_id']);
     }
 }
