@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\models\PanitiaCari */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Panitias';
+$this->title = 'Panitia';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="panitia-index">
@@ -19,21 +19,27 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); 
+    ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'panitia_id',
+            [
+                'class' => 'yii\grid\SerialColumn',
+                'header' => 'No'
+            ],
+            // 'panitia_id',
             'panitia_nama',
             'panitia_email:email',
             'panitia_no_hp',
             'panitia_web',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'header' => 'Aksi'
+            ],
         ],
     ]); ?>
 
