@@ -29,8 +29,18 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'peserta_id',
-            'webinar_id',
+            [
+                'attribute' => 'peserta_id',
+                'value' => function ($model) {
+                    $model->peserta;
+                },
+            ],
+            [
+                'attribute' => 'webinar_id',
+                'value' => function ($model) {
+                    $model->webinar->webinar_judul;
+                },
+            ],
             'waktu_daftar',
             'waktu_presensi',
             'no_sertifikat',

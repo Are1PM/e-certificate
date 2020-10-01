@@ -47,7 +47,7 @@ class Panitia extends \yii\db\ActiveRecord
             'panitia_nama' => 'Nama Panitia',
             'panitia_email' => 'Email Panitia',
             'panitia_no_hp' => 'No HP Panitia',
-            'panitia_web' => 'Web Panita',
+            'panitia_web' => 'Web Panitia',
         ];
     }
 

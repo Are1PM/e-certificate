@@ -40,7 +40,7 @@ class Tema extends \yii\db\ActiveRecord
     {
         return [
             'tema_id' => 'Tema ID',
-            'tema_nama' => 'Tema Nama',
+            'tema_nama' => 'Nama Tema',
         ];
     }
 
