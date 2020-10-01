@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\models\ECertificateCari */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'E Certificates';
+$this->title = 'E-Certificates';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ecertificate-index">
@@ -19,7 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); 
+    ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -27,10 +28,20 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'peserta_id',
-            'webinar_id',
+            [
+                'attribute' => 'peserta_id',
+                'value' => function ($model) {
+                    $model->peserta->peserta_nama;
+                },
+            ],
+            [
+                'attribute' => 'webinar_id',
+                'value' => function ($model) {
+                    $model->webinar->webinar_judul;
+                },
+            ],
             'waktu_daftar',
-            'waktu_presensi',
+            // 'waktu_presensi',
             'no_sertifikat',
 
             ['class' => 'yii\grid\ActionColumn'],
