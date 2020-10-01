@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Tema */
 
 $this->title = $model->tema_id;
-$this->params['breadcrumbs'][] = ['label' => 'Temas', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Tema', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

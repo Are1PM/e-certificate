@@ -32,7 +32,8 @@ class Panitia extends \yii\db\ActiveRecord
     {
         return [
             [['panitia_nama', 'panitia_email', 'panitia_no_hp', 'panitia_web'], 'required'],
-            [['panitia_nama', 'panitia_email', 'panitia_web'], 'string', 'max' => 145],
+            [['panitia_nama', 'panitia_web'], 'string', 'max' => 145],
+            [['panitia_email'], 'email'],
             [['panitia_no_hp'], 'string', 'max' => 45],
         ];
     }

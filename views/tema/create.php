@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $model app\models\Tema */
 
 $this->title = 'Create Tema';
-$this->params['breadcrumbs'][] = ['label' => 'Temas', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Tema', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tema-create">
