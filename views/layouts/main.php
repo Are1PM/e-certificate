@@ -47,7 +47,7 @@ AppAsset::register($this);
                 ['label' => 'Peserta', 'url' => ['/peserta/index'], 'visible' => !$guest],
                 ['label' => 'Tema', 'url' => ['/tema/index'], 'visible' => !$guest],
                 ['label' => 'Webinar', 'url' => ['/webinar/index'], 'visible' => !$guest],
-                ['label' => 'e-certificate', 'url' => ['/webinar/index']],
+                ['label' => 'e-certificate', 'url' => ['/e-certificate/index']],
                 Yii::$app->user->isGuest ? (['label' => 'Login', 'url' => ['/site/login']]) : ('<li>'
                     . Html::beginForm(['/site/logout'], 'post')
                     . Html::submitButton(
