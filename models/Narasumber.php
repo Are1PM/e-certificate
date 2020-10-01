@@ -47,11 +47,11 @@ class Narasumber extends \yii\db\ActiveRecord
     {
         return [
             'narasumber_id' => 'Narasumber ID',
-            'narasumber_nama' => 'Narasumber Nama',
-            'narasumber_no_hp' => 'Narasumber No Hp',
-            'narasumber_email' => 'Narasumber Email',
-            'narasumber_bidang_ilmu' => 'Narasumber Bidang Ilmu',
-            'narasumber_profil' => 'Narasumber Profil',
+            'narasumber_nama' => 'Nama Narasumber',
+            'narasumber_no_hp' => 'No HP Narasumber',
+            'narasumber_email' => 'Email Narasumber',
+            'narasumber_bidang_ilmu' => 'Bidang Ilmu Narasumber',
+            'narasumber_profil' => 'Profil Narasumber',
         ];
     }
 
